@@ -15,6 +15,15 @@ helpers do
   def format_interests(interests)
     interests.join(", ")
   end
+
+  def links_to_others(current)
+    other_users = @users.select { |name, _| name != current }
+    
+    other_users.keys.map do |name|
+      url = "/#{name}"
+      "<a href=#{url}>#{name}</a>"
+    end.join(", ")
+  end
 end
 
 def user_data(user)

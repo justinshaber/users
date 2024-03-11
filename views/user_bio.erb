@@ -9,5 +9,10 @@
       <p>Email: <%= @email %></p>
       <p>Interests: <%= format_interests(@interests) %></p>
     </div>
+    <br>
+    <br>
+    <div id="other_users">
+      <p><em>Other users:</em> <%= links_to_others(@user) %></p>
+    </div>
   </body>
 </html>
