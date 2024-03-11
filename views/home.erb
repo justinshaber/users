@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+      <div id="menu">
+        <div class="pure-menu">
+          <a class="pure-menu-heading" href="/">Users</a>
+
+          <ul class="pure-menu-list">
+            <% @users.each do |user_name, _| %>
+              <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link"><%=user_name.capitalize%></a>
+              </li>
+            <% end %>
+          </ul>
+      </div>
+    </div>
+  </body>
+</html>

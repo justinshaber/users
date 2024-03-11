@@ -1,0 +1,19 @@
+--- #whole document is a hash containing three k-v pairs
+:jamy: # first key of top level hash, value is a nested hash with two k-v pairs--:email, and :interests
+  :email: jamy.rustenburg@gmail.com
+  :interests: # second key, has an array with the following three items as a value.
+  - woodworking
+  - cooking
+  - reading
+:nora: 
+  :email: nora.alnes@yahoo.com
+  :interests:
+  - cycling
+  - basketball
+  - economics
+:hiroko:
+  :email: hiroko.ohara@hotmail.com
+  :interests:
+  - politics
+  - history
+  - birding
