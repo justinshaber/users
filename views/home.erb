@@ -11,7 +11,7 @@
           <ul class="pure-menu-list">
             <% @users.each do |user_name, _| %>
               <li class="pure-menu-item">
-              <a href="#" class="pure-menu-link"><%=user_name.capitalize%></a>
+              <a href="/<%= user_name %>" class="pure-menu-link"><%=user_name.capitalize%></a>
               </li>
             <% end %>
           </ul>
