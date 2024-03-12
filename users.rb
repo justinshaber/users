@@ -1,7 +1,8 @@
+require 'yaml'
+
 require "tilt/erubis"
 require "sinatra"
 require "sinatra/reloader"
-require 'yaml'
 
 before do
   @users = YAML.load_file('users.yml')
@@ -49,7 +50,7 @@ def user_data(user)
 end
 
 get "/" do
-  erb :all_user_stats, layout: :home
+  erb :home
 end
 
 get "/:user" do
@@ -57,7 +58,7 @@ get "/:user" do
   redirect "/" unless @users.has_key? @user
   @name, @email, @interests = user_data(@user)
 
-  erb :all_user_stats, layout: :user_bio
+  erb :user_bio
 end
 
 
