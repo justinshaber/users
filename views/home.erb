@@ -4,18 +4,19 @@
     <title>Home</title>
   </head>
   <body>
-      <div id="menu">
-        <div class="pure-menu">
-          <a class="pure-menu-heading" href="/">Users</a>
+    <div id="menu">
+      <div class="pure-menu">
+        <a class="pure-menu-heading" href="/">Users</a>
 
-          <ul class="pure-menu-list">
-            <% @users.each do |user_name, _| %>
-              <li class="pure-menu-item">
-              <a href="/<%= user_name %>" class="pure-menu-link"><%=user_name.capitalize%></a>
-              </li>
-            <% end %>
-          </ul>
+        <ul class="pure-menu-list">
+          <% @users.each do |user_name, _| %>
+            <li class="pure-menu-item">
+            <a href="/<%= user_name %>" class="pure-menu-link"><%=user_name.capitalize%></a>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </div>
+    <%= yield %>
   </body>
 </html>

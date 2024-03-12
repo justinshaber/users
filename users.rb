@@ -24,6 +24,20 @@ helpers do
       "<a href=#{url}>#{name}</a>"
     end.join(", ")
   end
+
+  def count_interests
+    total_interests = 0
+
+    @users.each_value do |user_data|
+      total_interests += user_data[:interests].size
+    end
+    
+    total_interests
+  end
+
+  def count_users
+    @users.size
+  end
 end
 
 def user_data(user)
@@ -35,7 +49,7 @@ def user_data(user)
 end
 
 get "/" do
-  erb :home
+  erb :all_user_stats, layout: :home
 end
 
 get "/:user" do
@@ -43,7 +57,7 @@ get "/:user" do
   redirect "/" unless @users.has_key? @user
   @name, @email, @interests = user_data(@user)
 
-  erb :user_bio
+  erb :all_user_stats, layout: :user_bio
 end
 
 
