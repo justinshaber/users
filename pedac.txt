@@ -12,3 +12,11 @@ Requirements
 6. Update the message printed out in #5 to determine the number of users and interests based on the content of the YAML file. Use a view helper method, count_interests, to determine the total number of interests across all users.
 
 7. Add a new user to the users.yaml file. Verify that the site updates accordingly.
+
+Server side or client side?
+
+Style sheets   (.css) - code runs on the client side when a response is generated
+JavaScript      (.js) - run within the browser when a response is sent
+Gemfile               - Used by Bundle to manage dependencies used to run the program.
+View templates (.erb) - server side, embedded ruby must be evaluated by a server before a response is sent.
+Ruby            (.rb) - Contains application code that will be executed by the server

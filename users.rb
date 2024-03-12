@@ -2,7 +2,7 @@ require 'yaml'
 
 require "tilt/erubis"
 require "sinatra"
-require "sinatra/reloader"
+require "sinatra/reloader" if development?
 
 before do
   @users = YAML.load_file('users.yml')
